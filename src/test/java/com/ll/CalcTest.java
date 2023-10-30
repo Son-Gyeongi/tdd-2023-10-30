@@ -65,17 +65,10 @@ public class CalcTest {
         assertThat(rs).isEqualTo(0);
     }
 
-//    @Test
-//    @DisplayName("10 * 10 => 100")
-//    void t4() {
-//        int rs = Calc.run("10 * 10");
-//        assertThat(rs).isEqualTo(100);
-//    }
-//
-//    @Test
-//    @DisplayName("10 / 10 => 1")
-//    void t5() {
-//        int rs = Calc.run("10 / 10");
-//        assertThat(rs).isEqualTo(1);
-//    }
+    @Test
+    @DisplayName("10 - 5 => 5")
+    void t7() {
+        int rs = Calc.run("10 - 5");
+        assertThat(rs).isEqualTo(5);
+    }
 }
