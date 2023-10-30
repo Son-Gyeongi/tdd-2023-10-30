@@ -33,24 +33,49 @@ public class CalcTest {
         assertThat(rs).isEqualTo(20);
     }
 
+    // 이때까지 구현을 피했지만 이제는 구현할 때
+    @Test
+    @DisplayName("10 + 20 => 30")
+    void t3() {
+        int rs = Calc.run("10 + 20");
+        // 요구사항 작성
+        assertThat(rs).isEqualTo(30);
+    }
+
+    @Test
+    @DisplayName("10 + 30 => 40")
+    void t4() {
+        int rs = Calc.run("10 + 30");
+        // 요구사항 작성
+        assertThat(rs).isEqualTo(40);
+    }
+
+    @Test
+    @DisplayName("10 + 40 => 50")
+    void t5() {
+        int rs = Calc.run("10 + 40");
+        // 요구사항 작성
+        assertThat(rs).isEqualTo(50);
+    }
+
     @Test
     @DisplayName("10 - 10 => 0")
-    void t3() {
+    void t6() {
         int rs = Calc.run("10 - 10");
         assertThat(rs).isEqualTo(0);
     }
 
-    @Test
-    @DisplayName("10 * 10 => 100")
-    void t4() {
-        int rs = Calc.run("10 * 10");
-        assertThat(rs).isEqualTo(100);
-    }
-
-    @Test
-    @DisplayName("10 / 10 => 1")
-    void t5() {
-        int rs = Calc.run("10 / 10");
-        assertThat(rs).isEqualTo(1);
-    }
+//    @Test
+//    @DisplayName("10 * 10 => 100")
+//    void t4() {
+//        int rs = Calc.run("10 * 10");
+//        assertThat(rs).isEqualTo(100);
+//    }
+//
+//    @Test
+//    @DisplayName("10 / 10 => 1")
+//    void t5() {
+//        int rs = Calc.run("10 / 10");
+//        assertThat(rs).isEqualTo(1);
+//    }
 }
