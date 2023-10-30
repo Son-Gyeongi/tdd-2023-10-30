@@ -12,13 +12,17 @@ public class Calc {
         int num1 = Integer.parseInt(expBits[0]);
         int num2 = Integer.parseInt(expBits[2]);
 
-        switch (sign) {
+        final int rs = switch (sign) {
             case "+":
-                return num1 + num2;
+                yield num1 + num2;
             case "-":
-                return num1 - num2;
-            default: // "*"
-                return num1 * num2;
-        }
+                yield num1 - num2;
+            case "*":
+                yield num1 * num2;
+            default: // "/"
+                yield num1 / num2;
+        };
+
+        return rs;
     }
 }
